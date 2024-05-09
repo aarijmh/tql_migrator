@@ -1,0 +1,15 @@
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\btm\BTMParser.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\datasources\CustomerInformationReader.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\datasources\POCExcelCustomerInformationReader.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\extractor\FunctionExtractor.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\extractor\POCFunctionExtractor.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\extractor\POCRegionExtractor.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\models\CustomerInformation.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\models\Functoid.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\models\Region.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\models\Transaction.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\Runner.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\sheetmaker\POCRuleExtractor.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\sheetmaker\POCSheetMaker.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\sheetmaker\ReverseEngineeringSheetMaker.java
+C:\Users\dell\eclipse-workspace\tql_migrator\src\main\java\com\turing\tql\migrator\sheetmaker\RuleExtractorInterface.java

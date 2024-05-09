@@ -1,0 +1,229 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 536870912 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3528), pid=43196, tid=24488
+#
+# JRE version:  (20.0.1+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (20.0.1+9-29, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: target\tql_migrator-0.0.1-SNAPSHOT.jar -t 15678
+
+Host: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz, 12 cores, 31G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3235)
+Time: Mon Mar 25 18:06:20 2024 Pakistan Standard Time elapsed time: 0.015704 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002509ea43db0):  JavaThread "Unknown thread" [_thread_in_vm, id=24488, stack(0x000000d562100000,0x000000d562200000)]
+
+Stack: [0x000000d562100000,0x000000d562200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6bb95a]
+V  [jvm.dll+0x8485fa]
+V  [jvm.dll+0x84a1f5]
+V  [jvm.dll+0x84a8f3]
+V  [jvm.dll+0x280b0f]
+V  [jvm.dll+0x6b86e9]
+V  [jvm.dll+0x6ad2da]
+V  [jvm.dll+0x35adf5]
+V  [jvm.dll+0x363016]
+V  [jvm.dll+0x3b3b3e]
+V  [jvm.dll+0x3b3dc5]
+V  [jvm.dll+0x32b50a]
+V  [jvm.dll+0x32c32b]
+V  [jvm.dll+0x8112bf]
+V  [jvm.dll+0x3c0d91]
+V  [jvm.dll+0x7fcfe3]
+V  [jvm.dll+0x44c76f]
+V  [jvm.dll+0x44e0e1]
+C  [jli.dll+0x5287]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa58]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff8b52aa098, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000250c0f60b00 WorkerThread "GC Thread#0" [stack: 0x000000d562300000,0x000000d562400000] [id=24492]
+  0x000002509eacbdb0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000d562400000,0x000000d562500000] [id=40784]
+  0x000002509eacd160 WorkerThread "G1 Conc#0" [stack: 0x000000d562500000,0x000000d562600000] [id=43376]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8b4a8eb47]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002509ea43620] Heap_lock - owner thread: 0x000002509ea43db0
+
+Heap address: 0x0000000603000000, size: 8144 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 32 size 80 Howl #buckets 8 coarsen threshold 7372 Howl Bitmap #cards 1024 size 144 coarsen threshold 921 Card regions per heap region 1 cards per card region 8192
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000603000000, 0x0000000800000000)
+  region size 4096K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8b4e63c59]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.008 Loaded shared library C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff618c40000 - 0x00007ff618c4e000 	C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\java.exe
+0x00007ff9e9110000 - 0x00007ff9e9326000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff98ea90000 - 0x00007ff98eaa9000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007ff9e7740000 - 0x00007ff9e7804000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9e65e0000 - 0x00007ff9e6986000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff9e6990000 - 0x00007ff9e6aa1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff9b1f00000 - 0x00007ff9b1f17000 	C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\jli.dll
+0x00007ff9e7bd0000 - 0x00007ff9e7d7d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff9e6b60000 - 0x00007ff9e6b86000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff9e7100000 - 0x00007ff9e7129000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9e64c0000 - 0x00007ff9e65d8000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff9e6dc0000 - 0x00007ff9e6e5a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff9b1eb0000 - 0x00007ff9b1ecb000 	C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\VCRUNTIME140.dll
+0x00007ff9c4760000 - 0x00007ff9c49f3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3235_none_270f74e173860f98\COMCTL32.dll
+0x00007ff9e7130000 - 0x00007ff9e71d7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9e7e50000 - 0x00007ff9e7e81000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff9a4c80000 - 0x00007ff9a4de4000 	C:\Program Files (x86)\Citrix\ICA Client\ctxapclient64.dll
+0x00007ff9e6ab0000 - 0x00007ff9e6ad8000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ff9e7260000 - 0x00007ff9e75e8000 	C:\WINDOWS\System32\combase.dll
+0x00007ff9e8030000 - 0x00007ff9e8145000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9dc680000 - 0x00007ff9dc68a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff9e7d90000 - 0x00007ff9e7e42000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff9e7910000 - 0x00007ff9e79b8000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff9e5560000 - 0x00007ff9e5594000 	C:\WINDOWS\SYSTEM32\ntmarta.dll
+0x000002509e150000 - 0x000002509e1ca000 	C:\WINDOWS\System32\bcryptprimitives.dll
+0x00007ff9e5540000 - 0x00007ff9e5558000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff9b1b90000 - 0x00007ff9b1b9c000 	C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\vcruntime140_1.dll
+0x00007ff962e40000 - 0x00007ff962ece000 	C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\msvcp140.dll
+0x00007ff8b4750000 - 0x00007ff8b53e7000 	C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\server\jvm.dll
+0x00007ff9bf760000 - 0x00007ff9bf769000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff9e8210000 - 0x00007ff9e8281000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff9de770000 - 0x00007ff9de7a4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9b1b80000 - 0x00007ff9b1b8a000 	C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\jimage.dll
+0x00007ff9e38a0000 - 0x00007ff9e3ad3000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff9e7650000 - 0x00007ff9e7727000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff9db2b0000 - 0x00007ff9db2e2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff9890a0000 - 0x00007ff9890c6000 	C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3235_none_270f74e173860f98;C:\Program Files (x86)\Citrix\ICA Client;C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin\server
+
+VM Arguments:
+java_command: target\tql_migrator-0.0.1-SNAPSHOT.jar -t 15678
+java_class_path (initial): target\tql_migrator-0.0.1-SNAPSHOT.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 4194304                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 536870912                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 8539602944                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 4194304                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 8539602944                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Users\Lenovo\.jdks\openjdk-20.0.1
+PATH=C:/Users/Lenovo/.jdks/openjdk-20.0.1/bin/server;C:/Users/Lenovo/.jdks/openjdk-20.0.1/bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;C:\Program Files (x86)\Cuminas\Document Express DjVu Plug-in\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Software\apache-maven-3.9.6\bin;C:\Program Files\Microsoft VS Code\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Development\gradle-8.5\bin;C:\Users\Lenovo\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\cudnn765\bin;C:\Users\Lenovo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts;C:\HashiCorp\Vagrant\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\Bitvise SSH Client;C:\Users\Lenovo\.jdks\openjdk-20.0.1\bin;C:\Program Files\Git\cmd;C:\Users\Lenovo\AppData\Local\Programs\Python\Python312;C:\Users\Lenovo\AppData\Local\Coursier\data\bin;D:\Software\hadoop\hadoop-3.3.6\bin;D:\Software\hadoop\hadoop-3.3.6\sbin;D:\Software\spark\spark-3.5.0-bin-hadoop3\bin;%CARGO_HOME%\bin;C:\Program Files\PowerShell\7\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\srcML;C:\Users\Lenovo\.cargo\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\Lenovo\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\Lenovo\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Lenovo\AppData\Roaming\npm;;D:\Software\haskell\ghcup\bin;C:\Users\Lenovo\AppData\Local\Coursier\data\bin;C:\Program Files\Azure Data Studio\bin;C:\WINDOWS\system32;
+USERNAME=Lenovo
+TERM=xterm
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+TMP=C:\Users\Lenovo\AppData\Local\Temp
+TEMP=C:\Users\Lenovo\AppData\Local\Temp
+
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.3235)
+OS uptime: 1 days 22:17 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 165 stepping 2 microcode 0xea, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, hv, rdtscp, f16c
+
+Memory: 4k page, system-wide physical 32569M (10695M free)
+TotalPageFile size 34617M (AvailPageFile size 488M)
+current process WorkingSet (physical memory assigned to process): 14M, peak: 14M
+current process commit charge ("private bytes"): 66M, peak: 578M
+
+vm_info: OpenJDK 64-Bit Server VM (20.0.1+9-29) for windows-amd64 JRE (20.0.1+9-29), built on 2023-03-07T13:56:11Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
